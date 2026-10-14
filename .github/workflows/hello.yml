@@ -1,0 +1,16 @@
+name: My First Automation
+
+on: [push]
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download my code to the server
+        uses: actions/checkout@v4
+      
+      - name: Print a greeting
+        run: echo "Hello, GitHub! I just pushed new code."
+        
+      - name: List the files in my repository
+        run: ls -la
